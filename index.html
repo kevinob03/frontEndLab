@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Laboratorio interactivo de fundamentos Front-End">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101e30'/%3E%3Cpath d='m25 20-12 12 12 12M39 20l12 12-12 12M36 14l-8 36' fill='none' stroke='%2350d890' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <title>Frontend Lab</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="topbar">
+      <a class="brand" href="#html" aria-label="Frontend Lab, inicio">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>Frontend <strong>Lab</strong></span>
+      </a>
+      <nav aria-label="Temas de la exposición">
+        <a class="nav-link active" href="#html" data-section="html">HTML</a>
+        <a class="nav-link" href="#css" data-section="css">CSS</a>
+        <a class="nav-link" href="#javascript" data-section="javascript">JavaScript</a>
+        <a class="nav-link" href="#apis" data-section="apis">APIs</a>
+      </nav>
+      <button class="button secondary presentation-toggle" type="button" aria-pressed="false">
+        Modo exposición
+      </button>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+      <section id="html" class="lab-section active" data-topic="html" aria-labelledby="html-title">
+        <div class="section-heading">
+          <div><p class="eyebrow html-text">Kevin · Diapositivas 1–3</p><h1 id="html-title" tabindex="-1">HTML da estructura y significado</h1></div>
+          <p>Una página semántica que el navegador y las personas pueden comprender.</p>
+        </div>
+        <div class="lab-grid">
+          <article class="code-panel" aria-labelledby="html-code-title">
+            <div class="panel-bar"><h2 id="html-code-title">index.html</h2><span class="language html-bg">HTML</span></div>
+            <pre><code><span class="syntax-tag">&lt;header&gt;</span>
+  <span class="syntax-tag">&lt;h1&gt;</span>Frontend Lab<span class="syntax-tag">&lt;/h1&gt;</span>
+<span class="syntax-tag">&lt;/header&gt;</span>
+<span class="syntax-tag">&lt;main&gt;</span>
+  <span class="syntax-tag">&lt;p&gt;</span>Aprende los fundamentos.<span class="syntax-tag">&lt;/p&gt;</span>
+  <span class="syntax-tag">&lt;a</span> <span class="syntax-attr">href</span>=<span class="syntax-string">"#temas"</span><span class="syntax-tag">&gt;</span>Ver temas<span class="syntax-tag">&lt;/a&gt;</span>
+  <span class="syntax-tag">&lt;form&gt;</span>
+    <span class="syntax-tag">&lt;label</span> <span class="syntax-attr">for</span>=<span class="syntax-string">"correo-html"</span><span class="syntax-tag">&gt;</span>Correo<span class="syntax-tag">&lt;/label&gt;</span>
+    <span class="syntax-tag">&lt;input</span> <span class="syntax-attr">id</span>=<span class="syntax-string">"correo-html"</span> <span class="syntax-attr">type</span>=<span class="syntax-string">"email"</span><span class="syntax-tag">&gt;</span>
+    <span class="syntax-tag">&lt;button&gt;</span>Suscribirme<span class="syntax-tag">&lt;/button&gt;</span>
+  <span class="syntax-tag">&lt;/form&gt;</span>
+<span class="syntax-tag">&lt;/main&gt;</span>
+<span class="syntax-tag">&lt;footer&gt;</span>Hecho con HTML5<span class="syntax-tag">&lt;/footer&gt;</span></code></pre>
+          </article>
+          <article class="demo-panel" aria-labelledby="html-demo-title">
+            <div class="panel-bar"><h2 id="html-demo-title">Demostración</h2><span class="live-dot">En vivo</span></div>
+            <div class="demo-body html-page" id="html-page">
+              <header data-semantic><h3>Frontend Lab</h3></header>
+              <main data-semantic>
+                <p>Aprende los fundamentos.</p><a href="#temas">Ver temas</a>
+                <form id="html-form"><label for="correo-html">Correo</label><input id="correo-html" type="email" placeholder="nombre@correo.com"><button type="submit">Suscribirme</button></form>
+              </main>
+              <footer data-semantic>Hecho con HTML5</footer>
+            </div>
+            <div class="demo-actions"><button class="button primary" id="highlight-semantics" type="button" aria-pressed="false">Destacar etiquetas</button><button class="button ghost reset-demo" data-reset="html" type="button">Restablecer demo</button></div>
+          </article>
+        </div>
+        <aside class="explanation-panel" data-explanation="html"><div><p class="eyebrow">Explorador de conceptos</p><h2>¿Qué hace este código?</h2></div><div class="concepts" role="group" aria-label="Conceptos HTML"></div><p class="concept-copy" aria-live="polite"></p></aside>
+      </section>
+
+      <section id="css" class="lab-section" data-topic="css" aria-labelledby="css-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow css-text">Óscar · Diapositivas 4–6</p><h1 id="css-title" tabindex="-1">CSS convierte estructura en diseño</h1></div><p>Selectores, espacio, distribución y adaptación en una misma demostración.</p></div>
+        <div class="lab-grid">
+          <article class="code-panel"><div class="panel-bar"><h2>styles.css</h2><span class="language css-bg">CSS</span></div><pre><code><span class="syntax-selector">.formulario</span> {
+  <span class="syntax-prop">padding</span>: <span class="syntax-value">1rem</span>;
+  <span class="syntax-prop">margin</span>: <span class="syntax-value">1rem auto</span>;
+  <span class="syntax-prop">border</span>: <span class="syntax-value">2px solid #58a6ff</span>;
+}
+<span class="syntax-selector">.flex</span> { <span class="syntax-prop">display</span>: <span class="syntax-value">flex</span>; }
+<span class="syntax-selector">.grid</span> {
+  <span class="syntax-prop">display</span>: <span class="syntax-value">grid</span>;
+  <span class="syntax-prop">grid-template-columns</span>: <span class="syntax-value">repeat(2, 1fr)</span>;
+}
+<span class="syntax-keyword">@media</span> (max-width: 480px) {
+  <span class="syntax-selector">.grid</span> { <span class="syntax-prop">grid-template-columns</span>: <span class="syntax-value">1fr</span>; }
+}</code></pre></article>
+          <article class="demo-panel"><div class="panel-bar"><h2>Laboratorio de estilos</h2><span class="live-dot">Interactivo</span></div>
+            <div class="demo-toolbar"><button class="button primary" id="toggle-css" type="button" aria-pressed="true">Con CSS</button><div class="segmented" role="group" aria-label="Vista del ejemplo"><button class="active" type="button" data-viewport="desktop" aria-pressed="true">Escritorio</button><button type="button" data-viewport="mobile" aria-pressed="false">Celular</button></div></div>
+            <div class="css-stage" id="css-stage">
+              <form class="css-sample-form styled" id="css-sample-form"><label for="css-email">Correo</label><input id="css-email" type="email" placeholder="nombre@correo.com"><button type="button">Enviar</button></form>
+              <div class="box-model" aria-label="Diagrama del modelo de caja"><span class="box-label margin-label">margin</span><div class="border-box"><span>border</span><div class="padding-box"><span>padding</span><div class="content-box">contenido</div></div></div></div>
+              <div><h3>Flexbox</h3><div class="flex-demo"><span>1</span><span>2</span><span>3</span></div></div>
+              <div><h3>Grid</h3><div class="grid-demo"><span>1</span><span>2</span><span>3</span><span>4</span></div></div>
+            </div>
+            <div class="demo-actions"><button class="button ghost reset-demo" data-reset="css" type="button">Restablecer demo</button></div>
+          </article>
+        </div>
+        <aside class="explanation-panel" data-explanation="css"><div><p class="eyebrow">Explorador de conceptos</p><h2>¿Qué hace este código?</h2></div><div class="concepts" role="group" aria-label="Conceptos CSS"></div><p class="concept-copy" aria-live="polite"></p></aside>
+      </section>
+
+      <section id="javascript" class="lab-section" data-topic="javascript" aria-labelledby="js-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow js-text">Wayner · Diapositivas 7–9</p><h1 id="js-title" tabindex="-1">JavaScript añade comportamiento</h1></div><p>Un evento modifica el DOM sin recargar la página ni enviar información.</p></div>
+        <div class="lab-grid">
+          <article class="code-panel"><div class="panel-bar"><h2>javascriptDemo.js</h2><span class="language js-bg">JS</span></div><pre><code><span class="syntax-keyword">const</span> formulario = document.querySelector(<span class="syntax-string">'#registro'</span>);
+<span class="syntax-keyword">const</span> mensaje = document.querySelector(<span class="syntax-string">'#mensaje'</span>);
+
+<span class="syntax-keyword">function</span> <span class="syntax-fn">mostrarConfirmacion</span>(correo) {
+  mensaje.textContent = <span class="syntax-string">`Correo válido: ${correo}`</span>;
+}
+
+formulario.addEventListener(<span class="syntax-string">'submit'</span>, (evento) => {
+  evento.preventDefault();
+  <span class="syntax-keyword">if</span> (!formulario.checkValidity()) {
+    formulario.reportValidity();
+    <span class="syntax-keyword">return</span>;
+  }
+  mostrarConfirmacion(formulario.elements.correo.value);
+});</code></pre></article>
+          <article class="demo-panel"><div class="panel-bar"><h2>Evento + DOM</h2><span class="live-dot">Sin recarga</span></div><div class="demo-body">
+            <form class="js-form" id="registro"><label for="js-email">Correo electrónico</label><div class="input-row"><input id="js-email" name="correo" type="email" required placeholder="nombre@correo.com"><button class="button js-button" type="submit">Validar</button></div></form>
+            <p id="mensaje" class="status-message" aria-live="polite">Esperando un correo válido…</p>
+            <div class="dom-tree" aria-label="Representación simplificada del árbol DOM"><span>document</span><span>└── form#registro</span><span>　├── label</span><span>　├── input#js-email</span><span>　└── button</span><span>└── p#mensaje <mark>← textContent</mark></span></div>
+          </div><div class="demo-actions"><button class="button ghost reset-demo" data-reset="javascript" type="button">Restablecer demo</button></div></article>
+        </div>
+        <aside class="explanation-panel" data-explanation="javascript"><div><p class="eyebrow">Explorador de conceptos</p><h2>¿Qué hace este código?</h2></div><div class="concepts" role="group" aria-label="Conceptos JavaScript"></div><p class="concept-copy" aria-live="polite"></p></aside>
+      </section>
+
+      <section id="apis" class="lab-section" data-topic="apis" aria-labelledby="api-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow api-text">Hanxel · Diapositivas 10–12</p><h1 id="api-title" tabindex="-1">Una API conecta aplicaciones</h1></div><p>Fetch realiza una petición GET real y convierte la respuesta a JSON.</p></div>
+        <div class="lab-grid">
+          <article class="code-panel"><div class="panel-bar"><h2>apiDemo.js</h2><span class="language api-bg">API</span></div><pre><code><span class="syntax-keyword">async function</span> <span class="syntax-fn">consultarUsuario</span>() {
+  <span class="syntax-keyword">try</span> {
+    <span class="syntax-keyword">const</span> response = <span class="syntax-keyword">await</span> fetch(API_URL);
+    estado.textContent = response.status;
+
+    <span class="syntax-keyword">if</span> (!response.ok) {
+      <span class="syntax-keyword">throw new</span> Error(<span class="syntax-string">'Respuesta no válida'</span>);
+    }
+
+    <span class="syntax-keyword">const</span> usuario = <span class="syntax-keyword">await</span> response.json();
+    nombre.textContent = usuario.name;
+  } <span class="syntax-keyword">catch</span> (error) {
+    mostrarError(error.message);
+  }
+}</code></pre></article>
+          <article class="demo-panel"><div class="panel-bar"><h2>Petición HTTP</h2><span class="live-dot">JSONPlaceholder</span></div><div class="demo-body api-demo">
+            <div class="request-line"><span class="method">GET</span><code>https://jsonplaceholder.typicode.com/users/1</code></div>
+            <button class="button api-button" id="fetch-user" type="button">Consultar API</button>
+            <div id="api-loading" class="loading" role="status" hidden><span class="spinner" aria-hidden="true"></span> Consultando…</div>
+            <div class="response-summary"><div><span>Estado HTTP</span><strong id="http-status">—</strong></div><div><span>Usuario</span><strong id="user-name">—</strong></div></div>
+            <p id="api-error" class="error-message" role="alert" hidden></p>
+            <pre class="json-output" id="json-output" aria-label="Respuesta JSON">Sin respuesta todavía.</pre>
+            <details class="postman"><summary>Probar también con Postman</summary><ol><li>Selecciona <strong>GET</strong>.</li><li>Usa la URL exacta mostrada arriba.</li><li>Pulsa <strong>Send</strong>.</li><li>Revisa el código de estado y el cuerpo JSON.</li></ol></details>
+            <dl class="http-methods"><div><dt>GET</dt><dd>consulta</dd></div><div><dt>POST</dt><dd>crea</dd></div><div><dt>PUT</dt><dd>reemplaza</dd></div><div><dt>DELETE</dt><dd>elimina</dd></div></dl>
+          </div><div class="demo-actions"><button class="button ghost reset-demo" data-reset="apis" type="button">Restablecer demo</button></div></article>
+        </div>
+        <aside class="explanation-panel" data-explanation="apis"><div><p class="eyebrow">Explorador de conceptos</p><h2>¿Qué hace este código?</h2></div><div class="concepts" role="group" aria-label="Conceptos de API"></div><p class="concept-copy" aria-live="polite"></p></aside>
+      </section>
+    </main>
+    <div class="presentation-controls" hidden><button class="button secondary" id="previous-section" type="button">← Anterior</button><p id="presentation-progress" aria-live="polite"></p><button class="button primary" id="next-section" type="button">Siguiente →</button></div>
+    <noscript>Frontend Lab necesita JavaScript activado para ejecutar las demostraciones.</noscript>
+  </body>
+</html>
